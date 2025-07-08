@@ -122,6 +122,7 @@
     BConfig.OnEvent("Click", (*) => IniWrite(BConfig.Value, CPath, "Detection", "BConfig"))
 
     BSConfig := myGui.Add("Button", "x32 y144 w80 h23", "Config")
+    BSConfig.OnEvent("Click", (*) => Run(A_ScriptDir "\StarConfig.ahk"))
     BBConfig := myGui.Add("Button", "x384 y144 w80 h23", "Config")
 
     Tab.UseTab(4)
@@ -160,9 +161,9 @@
     BNormalMessage := myGui.Add("Button", "x368 y136 w114 h26", "Test default")
     BEmbedMessage := myGui.Add("Button", "x368 y176 w114 h23", "Test Ping")
     AllMessage := myGui.Add("Button", "x368 y213 w114 h23", "All in One Test")
-    BNormalMessage.OnEvent("Click", (*) => Run(A_ScriptDir "\assets\message.pyw"))
-    BEmbedMessage.OnEvent("Click", (*) => Run(A_ScriptDir "\assets\pingmessage.pyw"))
-    AllMessage.OnEvent("Click", (*) => Run(A_ScriptDir "\assets\picturemessage.pyw"))
+    BNormalMessage.OnEvent("Click", (*) => Run(A_ScriptDir "\assets\1.pyw"))
+    BEmbedMessage.OnEvent("Click", (*) => Run(A_ScriptDir "\assets\2.pyw"))
+    AllMessage.OnEvent("Click", (*) => Run(A_ScriptDir "\assets\3.pyw"))
     WH := myGui.Add("Button", "x448 y80 w26 h23", "?")
     ;oh god what is this
     WH.OnEvent("Click", (*) => MsgBox("Webhook ID is the URL you get from a webhook.`nDiscord ID is your Discord User ID.`nFor further help, visit the Credit Tab", "Webhook Help", 0x40))
