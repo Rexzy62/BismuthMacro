@@ -164,6 +164,7 @@
     BNormalMessage.OnEvent("Click", (*) => Run(A_ScriptDir "\assets\1.pyw"))
     BEmbedMessage.OnEvent("Click", (*) => Run(A_ScriptDir "\assets\2.pyw"))
     AllMessage.OnEvent("Click", (*) => Run(A_ScriptDir "\assets\3.pyw"))
+    
     WH := myGui.Add("Button", "x448 y80 w26 h23", "?")
     ;oh god what is this
     WH.OnEvent("Click", (*) => MsgBox("Webhook ID is the URL you get from a webhook.`nDiscord ID is your Discord User ID.`nFor further help, visit the Credit Tab", "Webhook Help", 0x40))
@@ -201,7 +202,6 @@
     myGui.Add("Link", "x400 y213 w100 h15", "<a href=`"https://www.youtube.com/watch?v=mc3cV57m3mM`">Discord ID Tutorial</a>")
     
     
-
     
     ;load ini shit
     ObbyDo.Value := IniRead(CPath, "Main", "ObbyDo", 0)

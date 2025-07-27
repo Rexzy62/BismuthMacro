@@ -23,13 +23,12 @@ myGui.Add("Text", "x520 y40 w40 h23 +0x200", "Name")
 TypeList := myGui.Add("DropDownList", "x56 y40 w120", ["Item", "Gauntlet"])
 Edit1 := myGui.Add("Edit", "x232 y40 w56 h21")  ; Hours
 Edit2 := myGui.Add("Edit", "x376 y40 w61 h21")  ; Minutes
-EnableItemConfig := myGui.Add("CheckBox", "x450 y40 w52 h23", "Enable")
 EditName := myGui.Add("Edit", "x560 y40 w100 h21")  ; Name
 
 EntryDelete := myGui.Add("Button", "x16 y384 w110 h23", "Delete Entries")
 EntryDelete.OnEvent("Click", DeleteAll)
 Help := myGui.Add("Button", "x230 y384 w85 h23 +0x200", "PLEASE READ!")
-Help.OnEvent("Click", (*) => MsgBox("The First Entry DOES NOT WORK, IT IS ONLY FOR CONFIURING THE NEW ENTRIES! `n`n After Adding a new entry IT IS SAVED LIKE THAT NO CHAGNING!`n`n Btw, the delete entries button deletes every entry. `n`n Name stands for the Item/Gauntlet Name"))
+Help.OnEvent("Click", (*) => MsgBox("This isnt Completely Finished sorry Ill fix it with future updates...`n`nThe First Entry DOES NOT WORK, IT IS ONLY FOR CONFIURING THE NEW ENTRIES! `n`n After Adding a new entry IT IS SAVED LIKE THAT NO CHAGNING!`n`n Btw, the delete entries button deletes every entry. `n`n Name stands for the Item/Gauntlet Name"))
 
 NewEntry := myGui.Add("Button", "x140 y384 w80 h23", "New Entry")
 NewEntry.OnEvent("Click", AddNewEntryAndSave)
@@ -42,12 +41,11 @@ myGui.Show()
 AddNewEntry()
 {
     global entryY, entrySpacing, myGui, entries
-    global TypeList, Edit1, Edit2, EnableItemConfig, EditName
+    global TypeList, Edit1, Edit2, EditName
 
     selectedType := TypeList.Text
     hourText := Edit1.Text
     minText := Edit2.Text
-    enableChecked := EnableItemConfig.Value
     nameText := EditName.Text
 
     newType := myGui.Add("DropDownList", "x56 y" entryY " w120", ["Item", "Gauntlet"])
@@ -59,13 +57,12 @@ AddNewEntry()
     newMin := myGui.Add("Edit", "x376 y" entryY " w61 h21")
     newMin.Text := minText
 
-    newEnable := myGui.Add("CheckBox", "x450 y" entryY " w52 h23", "Enable")
-    newEnable.Value := enableChecked
+
 
     newName := myGui.Add("Edit", "x560 y" entryY " w100 h21")
     newName.Text := nameText
 
-    entries.Push({type: newType, hour: newHour, min: newMin, enable: newEnable, name: newName})
+    entries.Push({type: newType, hour: newHour, min: newMin, name: newName})
     entryY += entrySpacing
 }
 
@@ -87,14 +84,13 @@ SaveAllEntries()
         IniWrite(entry.type.Text, iniPath, "Entry" index, "Type")
         IniWrite(entry.hour.Text, iniPath, "Entry" index, "Hours")
         IniWrite(entry.min.Text, iniPath, "Entry" index, "Minutes")
-        IniWrite(entry.enable.Value, iniPath, "Entry" index, "Enabled")
         IniWrite(entry.name.Text, iniPath, "Entry" index, "Name")
     }
 }
 
 LoadEntriesFromIni()
 {
-    global iniPath, TypeList, Edit1, Edit2, EnableItemConfig, EditName
+    global iniPath, TypeList, Edit1, Edit2, EditName
 
     i := 1
     while IniRead(iniPath, "Entry" i, "Type", "") != ""
@@ -110,7 +106,6 @@ LoadEntriesFromIni()
             TypeList.Text := typeVal
             Edit1.Text := hourVal
             Edit2.Text := minVal
-            EnableItemConfig.Value := enableVal
             EditName.Text := nameVal
         }
         else
@@ -118,7 +113,6 @@ LoadEntriesFromIni()
             TypeList.Text := typeVal
             Edit1.Text := hourVal
             Edit2.Text := minVal
-            EnableItemConfig.Value := enableVal
             EditName.Text := nameVal
             AddNewEntry()
         }

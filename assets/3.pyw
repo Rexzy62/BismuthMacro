@@ -5,7 +5,7 @@ import requests
 
 def send_webhook_embed():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    image_path = os.path.join(script_dir, 'testImg.png')
+    image_path = os.path.join(script_dir, 'testImg.gif')
 
     parent_folder = os.path.abspath(os.path.join(script_dir, '..'))
     config_path = os.path.join(parent_folder, 'config.ini')
@@ -29,7 +29,7 @@ def send_webhook_embed():
     content = f"<@{discord_id}>"
     embed = {
         "title": "Test Embed!",
-        "description": "This is a Test",
+        "description": "Cat - Sent from Bismuth Macro",
         "image": {
             "url": "attachment://testImg.png"
         }
