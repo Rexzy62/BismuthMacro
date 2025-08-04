@@ -62,4 +62,4 @@ MIT License
 ## 📣 Disclaimer
 
 This macro is intended for **educational and personal use only**.  
-Always follow the terms of service of any software or game you automate with this tool.
+Always follow the terms of service of Roblox or Sols Rng.
