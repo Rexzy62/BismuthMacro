@@ -32,9 +32,9 @@
 ## ✅ Getting Started
 
 1. Download or clone the repository.
-2. Install [AutoHotkey v2](https://www.autohotkey.com/download).
-2.1 Install [Python3](https://www.python.org/download).
-3. Launch `BismuthMacro.ahk` and select your desired function(s).
+2. Install [AutoHotkey v2](https://www.autohotkey.com).
+3. Install [Python3](https://www.python.org/downloads).
+4. Launch `BismuthMacro.ahk` and select your desired function(s).
 
 ---
 
