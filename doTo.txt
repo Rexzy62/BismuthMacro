@@ -1,0 +1,14 @@
+BugFixes
+
+⦁	Aura Equip ✅
+⦁	UseItem(delay!) 🟥
+⦁	QuestClaim ✅
+⦁	Webhook (Screenshots) 🟧
+
+⦁	Stella
+⦁	dailshop(once!)
+⦁	ROE
+⦁	Jake
+⦁	obby
+
+⦁	Restart(delay!)
