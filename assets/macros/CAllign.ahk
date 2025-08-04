@@ -1,8 +1,8 @@
 #Requires AutoHotkey v2.0
 #SingleInstance force
 
-ScriptDir := A_ScriptDir
-IniDir := ScriptDir "\..\..\"
+ScriptDir2 := A_ScriptDir
+OtherDir := StrReplace(ScriptDir2, "\Misc", "")
 
 WinActivate("Roblox")
 Sleep(333)
@@ -14,34 +14,33 @@ Sleep(1000)
 Send("{Enter}")
 Sleep(300)
 Send("{o Down}")
-Sleep(3000)
+Sleep(1000)
 Send("{o Up}")
-Sleep(300)
+Sleep(1000)
 Send("{i Down}")
 Sleep(250)
 Send("{i Up}")
 Sleep(300)
-
-Click("51, 472, 0")
+Click("36, 455, 0")
 Sleep(10)
-Click("36, 472, 0")
-Sleep(10)
-Sleep(100)
-Click("Left, 1")
-Sleep(10)
-Sleep(300)
-Click("533, 122, 0")
-Sleep(10)
-Sleep(100)
-Click("523, 120, 0")
+Click("26, 455, 0")
 Sleep(10)
 Sleep(100)
 Click("Left, 1")
 Sleep(10)
 Sleep(300)
-Click("1280, 540, 0")
+Click("401, 122, 0")
+Sleep(10)
+Sleep(100)
+Click("393, 120, 0")
+Sleep(10)
+Sleep(100)
+Click("Left, 1")
+Sleep(10)
 Sleep(300)
-
+Click("960, 540, 0")
+Sleep(500)
+Send("{a}")
 Send("{a down}")
 Sleep(4000)
 Send("{w down}")
@@ -57,6 +56,6 @@ Sleep(500)
 Send("{a up}")
 Sleep(300)
 
-Run "\Pinit.ahk"
-
 ExitApp()
+
+F2:: ExitApp()
