@@ -8,7 +8,7 @@
 
     myGui := Gui()
     myGui.Opt("-MinimizeBox -MaximizeBox -Theme")
-    Tab := myGui.Add("Tab3", "x0 y0 w503 h252", ["Main", "Crafting", "Detection", "Webhook", "Other", "Credits"])
+    Tab := myGui.Add("Tab3", "x0 y0 w510 h255", ["Main", "Crafting", "Detection", "Webhook", "Other", "Credits"])
     myGui.Title := "BismuthMacro"
     Tab.UseTab(1)
     myGui.Add("GroupBox", "x16 y32 w164 h84", "Main Settings")
@@ -20,8 +20,8 @@
     myGui.Add("GroupBox", "x184 y144 w165 h56", "Daily Shop")
     myGui.Add("GroupBox", "x16 y200 w280 h44", "Export and Import")
 
-    ObbyDo := myGui.Add("CheckBox", "x32 y56 w76 h23", "Do Obby")
-    ObbyDo.OnEvent("Click", (*) => IniWrite(ObbyDo.Value, CPath, "Main", "ObbyDo"))
+    ;ObbyDo := myGui.Add("CheckBox", "x32 y56 w76 h23", "Do Obby")
+    ;ObbyDo.OnEvent("Click", (*) => IniWrite(ObbyDo.Value, CPath, "Main", "ObbyDo"))
 
     QuestEnable := myGui.Add("CheckBox", "x32 y80 w120 h23", "Claim Quests")
     QuestEnable.OnEvent("Click", (*) => IniWrite(QuestEnable.Value, CPath, "Main", "QuestEnable"))
@@ -29,17 +29,17 @@
     AuraEnable := myGui.Add("CheckBox", "x208 y104 w128 h23", "Enable Auto Equip")
     AuraEnable.OnEvent("Click", (*) => IniWrite(AuraEnable.Value, CPath, "Main", "AuraEnable"))
 
-    ROE := myGui.Add("CheckBox", "x32 y144 w81 h23", "Collect ROE")
-    ROE.OnEvent("Click", (*) => IniWrite(ROE.Value, CPath, "Main", "ROE"))
+    ;ROE := myGui.Add("CheckBox", "x32 y144 w81 h23", "Collect ROE")
+    ;ROE.OnEvent("Click", (*) => IniWrite(ROE.Value, CPath, "Main", "ROE"))
 
-    ItemEnable := myGui.Add("CheckBox", "x48 y168 w120 h23", "Collect Items")
-    ItemEnable.OnEvent("Click", (*) => IniWrite(ItemEnable.Value, CPath, "Main", "ItemEnable"))
+    ;ItemEnable := myGui.Add("CheckBox", "x48 y168 w120 h23", "Collect Items")
+    ;ItemEnable.OnEvent("Click", (*) => IniWrite(ItemEnable.Value, CPath, "Main", "ItemEnable"))
     
-    DailyEnable := myGui.Add("CheckBox", "x192 y165 w55 h23", "Enable")
-    DailyEnable.OnEvent("Click", (*) => IniWrite(DailyEnable.Value, CPath, "Main", "DailyEnable"))
+    ;DailyEnable := myGui.Add("CheckBox", "x192 y165 w55 h23", "Enable")
+    ;DailyEnable.OnEvent("Click", (*) => IniWrite(DailyEnable.Value, CPath, "Main", "DailyEnable"))
     
-    ItemUse := myGui.Add("CheckBox", "x392 y56 w56 h23", "Enable")
-    ItemUse.OnEvent("Click", (*) => IniWrite(ItemUse.Value, CPath, "Main", "ItemUse"))
+    ;ItemUse := myGui.Add("CheckBox", "x392 y56 w56 h23", "Enable")
+    ;ItemUse.OnEvent("Click", (*) => IniWrite(ItemUse.Value, CPath, "Main", "ItemUse"))
 
     Aura := myGui.Add("Edit", "x200 y72 w133 h21")
     Aura.OnEvent("Change", (*) => IniWrite(Aura.Value, CPath, "Main", "Aura"))
@@ -50,13 +50,13 @@
 
     PH := myGui.Add("Button", "x128 y144 w23 h21", "?")
     AH := myGui.Add("Button", "x318 y44 w25 h23", "!")
-    DailyConfig := myGui.Add("Button", "x256 y165 w80 h23", "Config")
-    DailyConfig.OnEvent("Click", (*) => Run(A_ScriptDir "\Shop.ahk"))
+    ;DailyConfig := myGui.Add("Button", "x256 y165 w80 h23", "Config")
+    ;DailyConfig.OnEvent("Click", (*) => Run(A_ScriptDir "\Shop.ahk"))
     Import := myGui.Add("Button", "x168 y215 w120 h23", "Import from Clipboard")
     Import.OnEvent("Click", (*) => ImportSettings())
 
-    ItemConfig := myGui.Add("Button", "x380 y80 w80 h23", "Edit Config")
-    ItemConfig.OnEvent("Click", (*) => Run(A_ScriptDir "\UseItem.ahk"))
+    ;ItemConfig := myGui.Add("Button", "x380 y80 w80 h23", "Edit Config")
+    ;ItemConfig.OnEvent("Click", (*) => Run(A_ScriptDir "\UseItem.ahk"))
 
     Start := myGui.Add("Button", "x408 y216 w80 h23", "Start (F1)")
     Stop := myGui.Add("Button", "x320 y217 w80 h23", "Stop (F2)")
@@ -123,7 +123,7 @@
 
     BSConfig := myGui.Add("Button", "x32 y144 w80 h23", "Config")
     BSConfig.OnEvent("Click", (*) => Run(A_ScriptDir "\StarConfig.ahk"))
-    BBConfig := myGui.Add("Button", "x384 y144 w80 h23", "Config")
+    BBConfig := myGui.Add("Text", "x384 y144 w80 h23", "Config Soon!")
 
     Tab.UseTab(4)
     myGui.Add("GroupBox", "x8 y24 w480 h89", "Webhook Config")
@@ -143,11 +143,11 @@
     BiomeWebhook := myGui.Add("CheckBox", "x24 y160 w106 h23", "Biome Detection")
     BiomeWebhook.OnEvent("Click", (*) => IniWrite(BiomeWebhook.Value, CPath, "Webhook", "Biome"))
     
-    StarWebhook := myGui.Add("CheckBox", "x24 y184 w93 h23", "Star Detection")
-    StarWebhook.OnEvent("Click", (*) => IniWrite(StarWebhook.Value, CPath, "Webhook", "Star"))
+    ;StarWebhook := myGui.Add("Checkbox", "x24 y185 w93 h23", "Star Detection")
+    ;StarWebhook.OnEvent("Click", (*) => IniWrite(StarWebhook.Value, CPath, "Webhook", "Star"))
     
-    MerchantWebhook := myGui.Add("CheckBox", "x24 y208 w114 h23", "Merchant Detection")
-    MerchantWebhook.OnEvent("Click", (*) => IniWrite(MerchantWebhook.Value, CPath, "Webhook", "Merchant"))
+    ;MerchantWebhook := myGui.Add("CheckBox", "x24 y208 w114 h23", "Merchant Detection")
+    ;MerchantWebhook.OnEvent("Click", (*) => IniWrite(MerchantWebhook.Value, CPath, "Webhook", "Merchant"))
     
     InvScreen := myGui.Add("CheckBox", "x160 y136 w137 h23", "Inventory Screenshots")
     InvScreen.OnEvent("Click", (*) => IniWrite(InvScreen.Value, CPath, "Webhook", "InvScreen"))
@@ -155,8 +155,8 @@
     QuestScreen := myGui.Add("CheckBox", "x136 y160 w158 h23", "Quest Progress Screenshots")
     QuestScreen.OnEvent("Click", (*) => IniWrite(QuestScreen.Value, CPath, "Webhook", "QuestScreen"))
     
-    PotionScrren := myGui.Add("CheckBox", "x168 y184 w120 h23", "Send Potion Storage")
-    PotionScrren.OnEvent("Click", (*) => IniWrite(PotionScrren.Value, CPath, "Webhook", "PotionScrren"))
+    PotionScreen := myGui.Add("CheckBox", "x168 y184 w120 h23", "Send Potion Storage")
+    PotionScreen.OnEvent("Click", (*) => IniWrite(PotionScreen.Value, CPath, "Webhook", "PotionScreen"))
     
     BNormalMessage := myGui.Add("Button", "x368 y136 w114 h26", "Test default")
     BEmbedMessage := myGui.Add("Button", "x368 y176 w114 h23", "Test Ping")
@@ -204,42 +204,13 @@
     
     
     ;load ini shit
-    ObbyDo.Value := IniRead(CPath, "Main", "ObbyDo", 0)
+    ;ObbyDo.Value := IniRead(CPath, "Main", "ObbyDo", 0)
     QuestEnable.Value := IniRead(CPath, "Main", "QuestEnable", 0)
     AuraEnable.Value := IniRead(CPath, "Main", "AuraEnable", 0)
-    ROE.Value := IniRead(CPath, "Main", "ROE", 0)
-    ItemEnable.Value := IniRead(CPath, "Main", "ItemEnable", 0)
-    DailyEnable.Value := IniRead(CPath, "Main", "DailyEnable", 0)
-    ItemUse.Value := IniRead(CPath, "Main", "ItemUse", 0)
-    Aura.Value := IniRead(CPath, "Main", "Aura", "")
-    GauntletEnable.Value := IniRead(CPath, "Crafting", "GauntletEnable", 0)
-    EquipAfter.Value := IniRead(CPath, "Crafting", "EquipAfter", 0)
-    PotionEnable.Value := IniRead(CPath, "Crafting", "PotionEnable", 0)
-    Device.Value := IniRead(CPath, "Crafting", "Device", 1)
-    S1.Value := IniRead(CPath, "Crafting", "S1", 1)
-    S2.Value := IniRead(CPath, "Crafting", "S2", 1)
-    S3.Value := IniRead(CPath, "Crafting", "S3", 1)
-    GCooldown.Value := IniRead(CPath, "Crafting", "GCooldown", "")
-    SConfig.Value := IniRead(CPath, "Detection", "SConfig", 0)
-    MConfig.Value := IniRead(CPath, "Detection", "MConfig", 0)
-    BConfig.Value := IniRead(CPath, "Detection", "BConfig", 0)
-    WL.Value := IniRead(CPath, "Webhook", "WebhookLink", "")
-    DID.Value := IniRead(CPath, "Webhook", "DiscordID", "")
-    OtherWebhook.Value := IniRead(CPath, "Webhook", "Other", 0)
-    BiomeWebhook.Value := IniRead(CPath, "Webhook", "Biome", 0)
-    StarWebhook.Value := IniRead(CPath, "Webhook", "Star", 0)
-    MerchantWebhook.Value := IniRead(CPath, "Webhook", "Merchant", 0)
-    InvScreen.Value := IniRead(CPath, "Webhook", "InvScreen", 0)
-    QuestScreen.Value := IniRead(CPath, "Webhook", "QuestScreen", 0)
-    PotionScrren.Value := IniRead(CPath, "Webhook", "PotionScrren", 0)
-    RCooldown.Value := IniRead(CPath, "Other", "RCooldown", "")
-    RestartEnable.Value := IniRead(CPath, "Other", "RestartEnable", 0)
-    QuestEnable.Value := IniRead(CPath, "Main", "QuestEnable", 0)
-    AuraEnable.Value := IniRead(CPath, "Main", "AuraEnable", 0)
-    ROE.Value := IniRead(CPath, "Main", "ROE", 0)
-    ItemEnable.Value := IniRead(CPath, "Main", "ItemEnable", 0)
-    DailyEnable.Value := IniRead(CPath, "Main", "DailyEnable", 0)
-    ItemUse.Value := IniRead(CPath, "Main", "ItemUse", 0)
+    ;ROE.Value := IniRead(CPath, "Main", "ROE", 0)
+    ;ItemEnable.Value := IniRead(CPath, "Main", "ItemEnable", 0)
+    ;DailyEnable.Value := IniRead(CPath, "Main", "DailyEnable", 0)
+    ;ItemUse.Value := IniRead(CPath, "Main", "ItemUse", 0)
     Aura.Value := IniRead(CPath, "Main", "Aura", "")
     GauntletEnable.Value := IniRead(CPath, "Crafting", "GauntletEnable", 0)
     EquipAfter.Value := IniRead(CPath, "Crafting", "EquipAfter", 0)
@@ -256,11 +227,11 @@
     DID.Value := IniRead(CPath, "Webhook", "DID", "")
     OtherWebhook.Value := IniRead(CPath, "Webhook", "Other", 0)
     BiomeWebhook.Value := IniRead(CPath, "Webhook", "Biome", 0)
-    StarWebhook.Value := IniRead(CPath, "Webhook", "Star", 0)
-    MerchantWebhook.Value := IniRead(CPath, "Webhook", "Merchant", 0)
+    ;StarWebhook.Value := IniRead(CPath, "Webhook", "Star", 0)
+    ;MerchantWebhook.Value := IniRead(CPath, "Webhook", "Merchant", 0)
     InvScreen.Value := IniRead(CPath, "Webhook", "InvScreen", 0)
     QuestScreen.Value := IniRead(CPath, "Webhook", "QuestScreen", 0)
-    PotionScrren.Value := IniRead(CPath, "Webhook", "PotionScrren", 0)
+    PotionScreen.Value := IniRead(CPath, "Webhook", "PotionScrren", 0)
     RCooldown.Value := IniRead(CPath, "Other", "RCooldown", "")
     RestartEnable.Value := IniRead(CPath, "Other", "RestartEnable", 0)
 

@@ -1,9 +1,4 @@
-BugFixes
-
-⦁	Aura Equip ✅
-⦁	UseItem(delay!) 🟥
-⦁	QuestClaim ✅
-⦁	Webhook (Screenshots) ✅
+BugFixes for First Beta! 
 
 ⦁	Stella
 ⦁	dailshop(once!)
