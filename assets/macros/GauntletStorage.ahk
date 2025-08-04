@@ -2,14 +2,15 @@ WinActivate("Roblox")
 Sleep 333
 Sleep 300
 
-Click 35, 617, 0
-Sleep 10
-Click 33, 615, 0
+Click 29, 508, 0
 Sleep 10
 Sleep 100
 Click "Left", 1
 Sleep 10
 Sleep 300
+Click 940, 333, 0
+Sleep 100
+Click "Left", 1
 
 Send("{LWin down}{LShift down}{s down}")
 Sleep 50
@@ -29,9 +30,9 @@ Sleep 100
     
 
 Sleep 333
-Click 35, 617, 0
+Click 1415, 295, 0
 Sleep 100
-Click 33, 615, 0
+Click 1414, 295, 0
 Sleep 100
 Click "Left", 1
 
@@ -41,7 +42,7 @@ screenshotDir := picturesPath "\Screenshots"
 
 ; === Target directory inside the script's folder ===
 targetDir := A_ScriptDir "\screens"
-targetFile := targetDir "\QuestProgress.png"
+targetFile := targetDir "\GauntletStorage.png"
 
 ; === Create the target folder if it doesn't exist ===
 if !DirExist(targetDir)
