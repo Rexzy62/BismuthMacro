@@ -1,9 +1,6 @@
 #Requires AutoHotkey v2.0
 #SingleInstance force
 
-ScriptDir2 := A_ScriptDir
-OtherDir := StrReplace(ScriptDir2, "\Misc", "")
-
 WinActivate("Roblox")
 Sleep(333)
 Sleep(300)

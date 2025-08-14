@@ -179,9 +179,11 @@
     RestartEnable := myGui.Add("CheckBox", "x64 y56 w57 h23", "Enable")
     RestartEnable.OnEvent("Click", (*) => IniWrite(RestartEnable.Value, CPath, "Other", "RestartEnable"))
     
+    PSLink := myGui.Add("Edit", "x50 y110 w100 h23", "PS Link Here")
+    PSLink.OnEvent("Change", (*) => IniWrite(PSLink.Value, CPath, "Other", "PSLink"))
+
     RH := myGui.Add("Button", "x160 y45 w25 h23", "!")
     RH.OnEvent("Click", (*) => MsgBox("The Restart Cooldown is in Hours, if you want to restart every 6 hours, enter 6.", "Restart Help" , 0x40))
-
     Tab.UseTab(6)
     myGui.Add("GroupBox", "x240 y32 w120 h52", "HM")
     myGui.Add("GroupBox", "x8 y32 w101 h72", "UI")
@@ -234,6 +236,7 @@
     PotionScreen.Value := IniRead(CPath, "Webhook", "PotionScrren", 0)
     RCooldown.Value := IniRead(CPath, "Other", "RCooldown", "")
     RestartEnable.Value := IniRead(CPath, "Other", "RestartEnable", 0)
+    PSLink.Value := IniRead(CPath, "Other", "PSLink", "PS Link Here")
 
         myGui.Show()
     
