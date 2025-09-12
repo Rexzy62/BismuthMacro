@@ -34,30 +34,13 @@ if AuraEnable = 1 {
     Sleep(400)
     MouseClick("Left")
     Sleep(400)
-    MouseMove(200, 100)
+    MouseMove(650, 628)
+    Sleep "300"
 
-x := 748
-y := 624
-
-color := PixelGetColor(x, y, "RGB")
-
-targetColor := 0x9FF992
-
-if (color = targetColor) {
     MouseMove(615, 640)
     MouseMove(615, 638)
     MouseClick("Left")
-    Sleep(1000)
-    MouseMove(1414, 298)
-    MouseMove(1413, 298)
-    MouseClick("Left")
-    ExitApp()
-} else {
-    MouseMove(1414, 298)
-    MouseMove(1413, 298)
-    MouseClick("Left")
-    ExitApp()
-}
+      
 
 
 } else {

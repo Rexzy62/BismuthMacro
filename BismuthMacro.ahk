@@ -233,10 +233,10 @@
     ;MerchantWebhook.Value := IniRead(CPath, "Webhook", "Merchant", 0)
     InvScreen.Value := IniRead(CPath, "Webhook", "InvScreen", 0)
     QuestScreen.Value := IniRead(CPath, "Webhook", "QuestScreen", 0)
-    PotionScreen.Value := IniRead(CPath, "Webhook", "PotionScrren", 0)
-    RCooldown.Value := IniRead(CPath, "Other", "RCooldown", "")
-    RestartEnable.Value := IniRead(CPath, "Other", "RestartEnable", 0)
-    PSLink.Value := IniRead(CPath, "Other", "PSLink", "PS Link Here")
+    PotionScreen.Value := IniRead(CPath, "Webhook", "PotionScreen", 0)
+    ;RCooldown.Value := IniRead(CPath, "Other", "RCooldown", "Cooldown")
+    ;RestartEnable.Value := IniRead(CPath, "Other", "RestartEnable", 0)
+    ;PSLink.Value := IniRead(CPath, "Other", "PSLink", "PS Link Here")
 
         myGui.Show()
     

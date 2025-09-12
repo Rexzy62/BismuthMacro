@@ -15,3 +15,7 @@ for browser in ["chrome.exe", "msedge.exe", "firefox.exe", "opera.exe", "brave.e
     RunWait "taskkill /F /IM " browser, , "Hide"
 
 WinActivate "Roblox"
+MouseMove 936, 884
+MouseMove 936, 885
+MouseClick "left"
+Run("Insert UHHHH idk")
