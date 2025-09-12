@@ -19,3 +19,5 @@ MouseMove 936, 884
 MouseMove 936, 885
 MouseClick "left"
 Run("Insert UHHHH idk")
+
+F2::ExitApp()

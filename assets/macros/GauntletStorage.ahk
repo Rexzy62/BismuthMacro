@@ -67,3 +67,4 @@ if latestFile {
      
 } 
  
+F2::ExitApp()

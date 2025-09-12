@@ -44,3 +44,5 @@ Click(1420, 295, 0)
 Click(1422, 295, 0)
 MouseClick("left")
 ExitApp()
+
+F2::ExitApp()

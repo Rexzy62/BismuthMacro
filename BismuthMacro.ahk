@@ -59,7 +59,14 @@
     ;ItemConfig.OnEvent("Click", (*) => Run(A_ScriptDir "\UseItem.ahk"))
 
     Start := myGui.Add("Button", "x408 y216 w80 h23", "Start (F1)")
-    Stop := myGui.Add("Button", "x320 y217 w80 h23", "Stop (F2)")
+    Start.OnEvent("Click", (*) => StartMacro())
+    Stop := myGui.Add("text", "x320 y217 w80 h23", "Stop (F2)")
+
+    ; Define the StartMacro function
+    StartMacro() {
+        Run(A_ScriptDir "\assets\macros\loop.ahk")
+        Run(A_ScriptDir "\assets\BiomeUpdater.ahk")
+    }
 
     PH.OnEvent("Click", (*) => MsgBox(" ROE = Resonance of Elements `n Collet Items Will Collet Items On the Way.", "Pathing Help" , 0x40))
     AH.OnEvent("Click", (*) => MsgBox("Please Use A Ground Aura where the Player is not floating.", "Aura Eqiup Help" , 0x40))

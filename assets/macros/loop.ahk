@@ -1,26 +1,33 @@
 #Requires AutoHotkey v2.0
 
 ScriptDir := A_ScriptDir
-IniDir := StrReplace(ScriptDir, "\assets\macros", "\config.ini")
+IniDir := (ScriptDir, "\config.ini")
 
-loopturn := IniRead(IniDir, "Other", "loopturn", "1")
-
-if loopturn = 1
+turn := IniRead(IniDir, "Other", "R", "1")
+if turn = 1
 {
     Run("AE.ahk")
-} else if loopturn = 2
+    ExitApp()
+} else if turn = 2
 {
-    Run("BE.ahk")
-} else if loopturn = 3
+    Run("ClaimQuests.ahk")
+    ExitApp()
+} else if turn = 3
 {
-    ; Do something when loopturn is 3
-} else if loopturn = 4
+    Run("GauntletStorage.ahk")
+    ExitApp()
+} else if turn = 4
 {
-    ; Do something when loopturn is 4
-} else if loopturn = 5
+    Run("PotionStorage.ahk")
+    ExitApp()
+} else if turn = 5
 {
-    ; Do something when loopturn is 5
-} else if loopturn = 6
+    Run("QuestProgress.ahk")
+    ExitApp()
+} else if turn = 6
 {
-    ; Do something when loopturn is 6
+    ;Run(".ahk")
+    ExitApp()
 }
+
+F2::ExitApp()

@@ -46,3 +46,5 @@ if AuraEnable = 1 {
 } else {
     ExitApp()
 }
+
+F2:: ExitApp()
