@@ -10,8 +10,6 @@
   - ClaimQuests
   - Collect ROE
   - AutoEquip
-  - Daily Shop
-  - Item Use
   - Export and Import Settings
 
 - **Crafting Tab**: 
@@ -31,6 +29,8 @@
   - Restart Roblox
   - Private Server Link
   - Custom Loop **(BETA BRANCH ONLY)**
+  - Daily Shop
+  - Item Use
 
 ---
 
