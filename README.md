@@ -20,9 +20,9 @@
   - 3 Potion Crafting Slots
 
 -  **Detection Tab (WIP)**:
-  - Real-time log recognition to Detect Biomes
-  - Merchant Detection **(BETA)**
-  - Star Config & Clipping via Custom Hotkey! **(BETA)**
+   - Real-time log recognition to Detect Biomes
+   - Merchant Detection **(BETA)**
+   - Star Config & Clipping via Custom Hotkey! **(BETA)**
 
 - **Webhook Tab**:
   - Inventory Screenshots
