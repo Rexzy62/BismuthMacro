@@ -15,14 +15,14 @@
   - Export and Import Settings
 
 - **Crafting Tab**: 
-  - Gauntlet and Potion Crafting
-  - Equip after Crafting
+  - Potion Crafting
   - 3 Potion Crafting Slots
+  - Custom Cooldown **(BETA BRANCH ONLY)**
 
 -  **Detection Tab (WIP)**:
    - Real-time log recognition to Detect Biomes
    - Merchant Detection **(BETA)**
-   - Star Config & Clipping via Custom Hotkey! **(BETA)**
+   - Star Config & Clipping via Custom Hotkey! **(BETA BRANCH ONLY)**
 
 - **Webhook Tab**:
   - Inventory Screenshots
@@ -32,18 +32,7 @@
 - **Misc Tab**
   - Restart Roblox
   - Private Server Link
-  - Custom Loop **(BETA)**
-
----
-
-##  Beta Differences (UPDATED: 9/16/25)
-
-### > ⚠️ This is a **BETA** branch and may contain unstable or untested features.
-
-- New Features in Experimental Stage
-- Unfinished / Rushed Things
-- Experimental AHK logic
-- Refined slot Validation
+  - Custom Loop **(BETA BRANCH ONLY)**
 
 ---
 
