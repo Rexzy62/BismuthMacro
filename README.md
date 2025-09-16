@@ -5,13 +5,34 @@
 ---
 
 ##  Features
+- **Main Tab**:
+  - DoObby
+  - ClaimQuests
+  - Collect ROE
+  - AutoEquip
+  - Daily Shop
+  - Item Use
+  - Export and Import Settings
 
 - **Crafting Tab**: 
   - Gauntlet and Potion Crafting
--  **Detection Tab**:
+  - Equip after Crafting
+  - 3 Potion Crafting Slots
+
+-  **Detection Tab (WIP)**:
   - Real-time log recognition to Detect Biomes
-- **Pathing**
-  - Can Collect resonance of elements for you
+  - Merchant Detection **(BETA)**
+  - Star Config & Clipping via Custom Hotkey! **(BETA)**
+
+- **Webhook Tab**:
+  - Inventory Screenshots
+  - Webhook Testing
+  - Input Fields for Webhook Stuff
+  
+- **Misc Tab**
+  - Restart Roblox
+  - Private Server Link
+  - Custom Loop **(BETA)**
 
 ---
 
@@ -19,10 +40,10 @@
 
 ### > ⚠️ This is a **BETA** branch and may contain unstable or untested features.
 
-- New Detection Logic
-- unfinished Things
-- Experimental AHK logic under testing
-- Refined slot validation
+- New Features in Experimental Stage
+- Unfinished / Rushed Things
+- Experimental AHK logic
+- Refined slot Validation
 
 ---
 
