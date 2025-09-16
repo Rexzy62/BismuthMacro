@@ -6,55 +6,31 @@
 
 ##  Features
 
-- ⚗ **Crafting Tab**: 
+- **Crafting Tab**: 
   - Gauntlet and Potion Crafting
 -  **Detection Tab**:
-  - Real-time log recognition to Detect Biomes (WIP)
--  **Webhook Integration**: 
-  - Optional Discord webhook support for in-game events e.g. Aura Finds, Biomes and Merchant Detection.
+  - Real-time log recognition to Detect Biomes
+- **Pathing**
+  - Can Collect resonance of elements for you
 
 ---
 
-##  Beta Differences
+##  Beta Differences (UPDATED: 9/16/25)
 
 ### > ⚠️ This is a **BETA** branch and may contain unstable or untested features.
 
 - New Detection Logic
 - unfinished Things
 - Experimental AHK logic under testing
-- Refined slot validation & persistent settings
+- Refined slot validation
 
 ---
 
 ##  Tech Stack
 
 - **AutoHotkey v2** – Core scripting language
-- **INI File System** – Lightweight settings management
-- **Python 3** - Used for Sending Webhook Messages.
-
----
-
-##  File Structure (Beta)
-
- BismuthMacro/
-
-├─ BismuthMacro.ahk # Main AutoHotkey script
-
-├─ Shop.ahk
-
-├─ StarConfig.ahk
-
-├─ UseItem.ahk
-
-├─ config.ini
-
-├─ Dailyconfig.ini
-
-├─ StarConfig.ini
-
-├─ /assets
-
-└─ README.md # This file
+- **INI** – Lightweight settings management
+- **Python 3** - Used for Sending Webhook Messages & Biome Detection.
 
 ---
 
@@ -76,8 +52,9 @@
 
 ##  Known Issues (Beta)
 
-- Webhook messages may be delayed
-- GUI layout may shift on DPI scaling or unusual resolutions
+- Only the 3 Main Resolutions are Supported 1080p, 1400p and 4K
+- Some Pathing Issues might arise
+- some stuff might Break
 
 ---
 
@@ -86,15 +63,3 @@
 - **Rexzy61** – Creator, developer, GUI designer , VIP Pathing
 - **CatIsEatingFood** - Non VIP Pathing
 - Special thanks to testers and community supporters
-
----
-
-##  License
-
-MIT License 
-
----
-
-##  Notes
-
-This macro suite is intended for **educational and personal use only**. Please respect the terms of service of any software or game you use this with.
