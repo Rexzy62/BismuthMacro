@@ -23,11 +23,9 @@
    - Real-time log recognition to Detect Biomes
    - Merchant Detection **(BETA)**
    - Star Config & Clipping via Custom Hotkey! **(BETA BRANCH ONLY)**
-
-- **Webhook Tab**:
-  - Inventory Screenshots
-  - Webhook Testing
-  - Input Fields for Webhook Stuff
+   - Inventory Screenshots
+   - Webhook Testing
+   - Input Fields for Webhook Stuff
   
 - **Misc Tab**
   - Restart Roblox
