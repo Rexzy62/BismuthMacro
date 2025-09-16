@@ -42,19 +42,21 @@
 
 ---
 
-##  Usage
+## Usage
 
 1. Clone or download the repository.
 
-1.1 Install AutoHotkey V2 If You Havent yet at [Autohokey.com](https://www.autohotkey.com/download).
+1.1 Install AutoHotkey V2 and V1.1 If You Havent yet at [Autohokey.com](https://www.autohotkey.com/download).
 
-1.2 Install Pyhton 3 at [Python.org](https://www.python.org/downloads).
+1.2 Install Pyhton 3 at [Python.org](https://www.python.org/downloads) with Requests and Keyboard.
+
+1.3 Install Bloxstrap(alternative Roblox Client) and Enable Activity Tracking.
 
 2. Launch `BismuthMacro.ahk`
 
-3. Configure each tab .
+3. Configure each tab to your preferences.
 
-4. Save and enjoy!
+4. Save and enjoy !
 
 ---
 
