@@ -56,3 +56,5 @@ Sleep(300)
 ExitApp()
 
 F2:: ExitApp()
+Run("loop.ahk")
+ExitApp()

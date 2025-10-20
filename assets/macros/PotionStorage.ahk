@@ -1,35 +1,5 @@
-WinActivate("Roblox")
-Sleep 333
-Sleep 300
+IniDir := (A_ScriptDir, "\config.ini")
 
-Click 29, 508, 0
-Sleep 10
-Sleep 100
-Click "Left", 1
-Sleep 10
-Sleep 300
-Click 1254, 330, 0
-Sleep 100
-Click "Left", 1
-
-Send("{LWin down}{LShift down}{s down}")
-Sleep 50
-Send("{LWin up}{LShift up}{s up}")
-Sleep 1000
-
-Click 475, 271, "Down"
-Click 1443, 805, "Up"
-Sleep 1000
-WinActivate("Roblox")
-Sleep 333
-
-    
-Send("{LShift}")
-MouseClick "Left"
-Sleep 100
-    
-
-Sleep 333
 Click 1415, 295, 0
 Sleep 100
 Click 1414, 295, 0
@@ -68,3 +38,10 @@ if latestFile {
 } 
  
 F2::ExitApp()
+
+turn := IniRead(IniDir, "Turn", "R", "4")
+
+turn := 4
+IniWrite(turn, IniDir, "Turn", "R")
+Run("CAllign.ahk")
+ExitApp()

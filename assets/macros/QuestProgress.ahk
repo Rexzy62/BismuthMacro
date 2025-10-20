@@ -1,3 +1,4 @@
+IniDir := (A_ScriptDir, "\config.ini")
 WinActivate("Roblox")
 Sleep 333
 Sleep 300
@@ -67,3 +68,10 @@ if latestFile {
 } 
  
 F2::ExitApp()
+
+turn := IniRead(IniDir, "Turn", "R", "1")
+
+turn := 1
+IniWrite(turn, IniDir, "Turn", "R")
+Run("CAllign.ahk")
+ExitApp()

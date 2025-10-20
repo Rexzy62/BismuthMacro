@@ -7,10 +7,10 @@ Sleep(333)
 ScriptDir := A_ScriptDir
 IniDir := StrReplace(ScriptDir, "\assets\macros", "\config.ini")
 
-AuraEnable := IniRead(IniDir , "Main", "AuraEnable", "NotFound")
-Aura := IniRead(IniDir , "Main", "Aura", "Common")
+EnableAutoEquip := IniRead(IniDir , "Main", "EnableAutoEquip", "NotFound")
+AuraName := IniRead(IniDir , "Main", "AuraName", "Common")
 
-if AuraEnable = 1 {
+if EnableAutoEquip = 1 {
     Sleep(333)
     MouseMove(32, 424)
     Sleep(100)
@@ -23,7 +23,7 @@ if AuraEnable = 1 {
     Sleep(500)
     MouseClick("Left")
     Sleep(700)
-    Send(Aura)
+    Send(AuraName)
     Sleep(100)
     MouseMove(820 ,429)
     MouseMove(820, 430)
