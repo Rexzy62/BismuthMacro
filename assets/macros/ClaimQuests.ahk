@@ -47,10 +47,3 @@ MouseClick("left")
 ExitApp()
 
 F2::ExitApp()
-
-turn := IniRead(IniDir, "Turn", "R", "2")
-
-turn := 2
-IniWrite(turn, IniDir, "Turn", "R")
-Run("CAllign.ahk")
-ExitApp()

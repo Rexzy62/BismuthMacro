@@ -89,13 +89,13 @@ myGui := Gui()
 	Tab.UseTab(3)
 	
 	TestRun := myGui.Add("Button", "x232 y234 w109 h31", "Run Webhook Test")
-	TestRun.OnEvent("click", (*) => IniWrite(TestRun, CPath, "Detection", "TestRun"))
+	TestRun.OnEvent("click", (*) => Run(A_ScriptDir "\assets\WebhookTest.pyw"))
 
 	BiomeDetection := myGui.Add("CheckBox", "x16 y32 w135 h23", "Enable Biome Detection")
 	BiomeDetection.OnEvent("click", (*) => IniWrite(BiomeDetection.Value, CPath, "Detection", "BiomeDetection"))
 
 	ConfigBiomes := myGui.Add("Button", "x48 y56 w80 h23", "Config")
-	BiomeDetection.OnEvent("click", (*) => Run("BiomeConfig.pyw"))
+	ConfigBiomes.OnEvent("click", (*) => Run("BiomeConfig.pyw"))
 
 	;AuraDetection := myGui.Add("CheckBox", "x16 y80 w138 h23", "Enable Aura Detection")
 	;AuraDetection.OnEvent("click", (*) => IniWrite(AuraDetection, CPath, "Detection", "AuraDetection"))
@@ -113,7 +113,7 @@ myGui := Gui()
 	SendScreenshots.OnEvent("click", (*) => IniWrite(SendScreenshots.Value, CPath, "Detection", "SendScreenshots"))
 	
 	WebhookConfig := myGui.Add("Button", "x8 y208 w118 h23", "Edit Webhook Config")
-	WebhookConfig.OnEvent("click", (*) => Run("WebhookConfig.pyw"))
+	WebhookConfig.OnEvent("click", (*) => Run("WebhookConfig.ahk"))
 	
 	Tab.UseTab(4)
 
@@ -122,8 +122,8 @@ myGui := Gui()
 	;RestartRoblox := myGui.Add("CheckBox", "x16 y32 w142 h23", "Enable Roblox Restarting")
 	;RestartRoblox.OnEvent("click", (*) => IniWrite(RestartRoblox, CPath, "Misc", "RestartRoblox"))
 
-	;PSLink := myGui.Add("Edit", "x8 y56 w333 h21", "Private Server Link")
-	;PSLink.OnEvent("Change", (*) => IniWrite(PSLink, CPath, "Misc", "PSLink"))
+	PSLink := myGui.Add("Edit", "x8 y56 w333 h21", "Private Server Link")
+	PSLink.OnEvent("Change", (*) => IniWrite(PSLink, CPath, "Main2", "pslink"))
 
 	;AltLoop := myGui.Add("CheckBox", "x16 y96 w120 h23", "Enable Alt Loop")
 	;AltLoop.OnEvent("click", (*) => IniWrite(AltLoop, CPath, "Misc", "AltLoop"))

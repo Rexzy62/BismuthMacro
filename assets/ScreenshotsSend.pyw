@@ -9,18 +9,17 @@ parent_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
 # Load config.ini from parent directory
 config_path = os.path.join(parent_dir, "config.ini")
 config = configparser.ConfigParser()
-config.read(config_path)
+config.read(config_path, encoding="utf-16")
 
-webhook_url = config.get("Webhook", "WebhookLink", fallback=None)
+webhook_url = config.get("Main2", "WebhookLink", fallback=None)
 
 if not webhook_url:
-    print("❌ Webhook URL not found in config.ini.")
+    print("Webhook URL not found in config.ini.")
     exit(1)
 
 # Screenshot names and paths
 screenshot_names = [
     "QuestProgress.png",
-    "GauntletStorage.png",
     "PotionStorage.png"
 ]
 screenshot_dir = os.path.join(script_dir, "macros", "screens")
@@ -54,6 +53,6 @@ with requests.Session() as session:
     )
 
     if response.status_code == 204:
-        print("✅ Screenshots sent successfully.")
+        print("Screenshots sent.")
     else:
-        print(f"❌ Failed to send. Status: {response.status_code}, Response: {response.text}")
+        print(f"Failed. Status: {response.status_code}, Response: {response.text}")

@@ -5,16 +5,16 @@ import requests
 
 def send_webhook_embed():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    image_path = os.path.join(script_dir, 'testImg.gif')
+    image_path = os.path.join(script_dir, 'testimg.jpg')
 
     parent_folder = os.path.abspath(os.path.join(script_dir, '..'))
     config_path = os.path.join(parent_folder, 'config.ini')
 
     config = configparser.ConfigParser()
-    config.read(config_path)
+    config.read(config_path, encoding='utf-16')
 
-    webhook_url = config.get('Webhook', 'WebhookLink', fallback=None)
-    discord_id = config.get('Webhook', 'DID', fallback=None)
+    webhook_url = config.get('Main2', 'webhooklink', fallback=None)
+    discord_id = config.get('Main2', 'discorduserid', fallback=None)
 
     if not webhook_url:
         print("Webhook URL not found in config")
@@ -29,7 +29,7 @@ def send_webhook_embed():
     content = f"<@{discord_id}>"
     embed = {
         "title": "Test Embed!",
-        "description": "Cat - Sent from Bismuth Macro",
+        "description": "Car - Sent from Bismuth Macro as a Test",
         "image": {
             "url": "attachment://testImg.png"
         }
